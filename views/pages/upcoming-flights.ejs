@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Flights</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/upcoming-flights.js" defer></script>
+</head>
+<body id="upcoming-flights-page">
+  <div id="overlay"></div>
+  <div id="mobile-menu" class="mobile-main-menu">
+    <ul>
+      <li><a href="upcoming-flights.html">Launches</a></li>
+      <li class="mobile-only"><a href="falcon9.html">Falcon 9</a></li>
+      <li class="mobile-only"><a href="falcon-heavy.html">Falcon Heavy</a></li>
+      <li class="mobile-only"><a href="dragon.html">Dragon</a></li>
+    </ul>
+  </div>
+  <header class="main-header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/logo.png" alt="SpaceX" />
+      </a>
+    </div>
+    <nav class="desktop-main-menu">
+      <ul>
+        <li><a href="falcon9.html">Falcon 9</a></li>
+        <li><a href="falcon-heavy.html">Falcon Heavy</a></li>
+        <li><a href="dragon.html">Dragon</a></li>
+      </ul>
+    </nav>`
+  </header>
+  
+  <button id="menu-btn" class="hamburger" type="button">
+    <span class="hamburger-top"></span>
+    <span class="hamburger-middle"></span>
+    <span class="hamburger-bottom"></span>
+  </button>
+  
+
+    <main id="flights-container">
+        <!-- Flight grid items will be dynamically inserted here -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Space Launches</p>
+    </footer>
+</body>
+</html>
