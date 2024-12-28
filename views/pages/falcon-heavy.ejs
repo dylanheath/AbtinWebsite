@@ -4,40 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="js/script.js" defer></script>
     <title>SpaceX - Falcon Heavy</title>
   </head>
   <body>
-    <div id="overlay"></div>
-    <div id="mobile-menu" class="mobile-main-menu">
-      <ul>
-        <li><a href="upcoming-flights.html">Launches</a></li>
-        <li class="mobile-only"><a href="falcon9.html">Falcon 9</a></li>
-        <li class="mobile-only"><a href="falcon-heavy.html">Falcon Heavy</a></li>
-        <li class="mobile-only"><a href="dragon.html">Dragon</a></li>
-      </ul>
-    </div>
-    <header class="main-header">
-      <div class="logo">
-        <a href="index.html">
-          <img src="img/logo.png" alt="SpaceX" />
-        </a>
-      </div>
-      <nav class="desktop-main-menu">
-        <ul>
-          <li><a href="falcon9.html">Falcon 9</a></li>
-          <li><a href="falcon-heavy.html">Falcon Heavy</a></li>
-          <li><a href="dragon.html">Dragon</a></li>
-        </ul>
-      </nav>`
-    </header>
-    
-    <button id="menu-btn" class="hamburger" type="button">
-      <span class="hamburger-top"></span>
-      <span class="hamburger-middle"></span>
-      <span class="hamburger-bottom"></span>
-    </button>
+    <%- include('../partials/header'); %>
     
 
     <section class="section-animate bg-falcon-heavy"></section>
@@ -61,17 +33,6 @@
       </div>
     </div>
 
-    <footer>
-      <ul>
-        <li>SpaceX &copy; 2022</li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">YouTube</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Flickr</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">Privacy</a></li>
-        <li><a href="#">Suppliers</a></li>
-      </ul>
-    </footer>
+    
   </body>
 </html>
