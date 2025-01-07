@@ -1,6 +1,20 @@
 var express = require("express");
 var app = express();
 const path = require("path");
+const mongoose = require("mongoose")
+const Launch = require("./model/launches")
+require('dotenv').config();
+
+const uri = process.env.MONGODB_CONNECTION_STRING
+
+mongoose.connect(uri, {
+  dbName: 'Launches'
+})
+
+const connection = mongoose.connection;
+connection.once("open", () => {
+  console.log("Mongodb connection open")
+})
 
 // set the view engine to ejs
 app.set("view engine", "ejs");
@@ -28,10 +42,18 @@ app.get("/falcon-heavy", function (req, res) {
 });
 
 //upcoming launches page
-app.get("/upcoming-flights", function (req, res) {
-  res.render("pages/upcoming-flights");
+app.get("/upcoming-flights", async function (req, res) {
+  await Launch.find().then((data) => {
+    console.log(data)
+    res.render("pages/upcoming-flights", {LaunchDataArray: data});
+   })
 });
 
+app.get("/get-upcoming-flights", async function (req, res) {
+    await Launch.find().then((data) => {
+      res.send(data)
+     })
+})
 //dragon page
 app.get("/dragon", function (req, res) {
   res.render("pages/dragon");

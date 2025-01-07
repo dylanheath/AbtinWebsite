@@ -6,13 +6,22 @@
     <title>Upcoming Flights</title>
     <link rel="stylesheet" href="style.css">
     <script src="js/script.js" defer></script>
-    <script src="js/upcoming-flights.js" defer></script>
 </head>
 
 <%- include('../partials/header'); %>
 
 <body id="upcoming-flights-page">
     <main id="flights-container">
+        <% LaunchDataArray.forEach(function(launch) { %>
+            <div>
+            <li>
+              <strong><%= launch.name %></strong>
+              <strong><%= launch.provider%></strong>
+              <strong><%= launch.date%></strong>
+              <strong><%= launch.time%></strong>
+            </li>
+        </div>
+          <% }); %>
         <!-- Flight grid items will be dynamically inserted here -->
     </main>
     <footer>
